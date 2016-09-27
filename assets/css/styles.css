@@ -1,0 +1,567 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,300|Ubuntu:300,400,600';
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.slick-track {
+  height: 100vh;
+}
+body {
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+body left 0 a {
+  text-decoration: none;
+  color: #fff;
+}
+#header {
+  width: 100%;
+  float: left;
+  position: fixed;
+  box-shadow: 1px 1px 10px #000;
+  z-index: 99;
+}
+#header .header-st-row {
+  width: 100%;
+  float: left;
+  line-height: 30px;
+  font-family: 'Ubuntu';
+  padding: 0% 5%;
+  background-color: #0e086e;
+}
+#header .header-st-row .st-divider {
+  width: 50%;
+  float: left;
+}
+#header .header-st-row .st-divider .nd-divider {
+  width: 50%;
+  float: left;
+}
+#header .header-st-row .st-divider .nd-divider span {
+  font-size: 0.9em;
+  color: #fff;
+  margin: 1%;
+}
+#header .header-st-row .st-divider .nd-divider i {
+  color: #fff;
+  font-size: 1em;
+  margin: 1%;
+}
+#header .header-bar {
+  width: 100%;
+  float: left;
+  padding: 0% 5%;
+  background-color: rgba(255,255,255,0.9);
+}
+#header .header-bar .header-logo {
+  width: 12%;
+  float: left;
+}
+#header .header-bar .header-logo img {
+  width: 100%;
+  float: left;
+  padding: 10%;
+}
+#header .header-bar .header-menu {
+  width: 88%;
+  float: left;
+  text-align: center;
+}
+#header .header-bar .header-menu nav {
+  width: 100%;
+  float: left;
+  padding: 2.5% 0% 0% 0%;
+}
+#header .header-bar .header-menu nav ul {
+  list-style: none;
+}
+#header .header-bar .header-menu nav ul li {
+  display: inline-block;
+  margin: 0% 4%;
+  transition: all 200ms;
+  padding: 0;
+  text-align: center;
+}
+#header .header-bar .header-menu nav ul li a {
+  text-decoration: none;
+  color: #c41d0e;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 1.2em;
+  transition: all 500ms;
+  font-weight: 600;
+  padding: 1%;
+  position: relative;
+}
+#header .header-bar .header-menu nav ul li a:after {
+  content: " ";
+  width: 50px;
+  height: 2px;
+  background-color: transparent;
+  bottom: 0;
+  left: 1px;
+  position: absolute;
+  transition: all 500ms;
+}
+#header .header-bar .header-menu nav ul li a:hover {
+  color: #0e086e;
+}
+#header .header-bar .header-menu nav ul li a:hover:after {
+  background-color: #0e086e;
+}
+#home {
+  width: 100%;
+  float: left;
+}
+#home .slider-container {
+  width: 100%;
+  float: left;
+}
+#home .slider-container .slider {
+  width: 100%;
+  float: left;
+  height: 100vh;
+}
+#home .slider-container .slider .slider1 {
+  background-image: url("../img/slide1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#home .slider-container .slider .slider2 {
+  background-image: url("../img/slide2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#home .slider-container .slider .slider3 {
+  background-image: url("../img/slide3.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#home .slider-container .slider .item {
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+#home .slider-container .slider .item .slider-shadow {
+  width: 100%;
+  float: left;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+#home .slider-container .slider .item .slider-presentation {
+  width: 100%;
+  float: left;
+  padding: 22% 5% 0% 5%;
+  text-align: center;
+}
+#home .slider-container .slider .item .slider-presentation .first {
+  width: 100%;
+  float: left;
+  font-size: 3em;
+  text-shadow: 1px 1px 5px #000;
+  font-family: 'Ubuntu';
+  color: #fff;
+}
+#home .slider-container .slider .item .slider-presentation .second {
+  width: 100%;
+  float: left;
+  font-size: 1.8em;
+  font-family: 'Roboto';
+  text-shadow: 1px 1px 5px #000;
+  color: #fff;
+}
+#home .slider-container .slider .item .slider-presentation .link {
+  width: 100%;
+  float: left;
+  margin: 6% 0% 0% 0%;
+}
+#home .slider-container .slider .item .slider-presentation .link a {
+  padding: 1% 2%;
+  border: solid 2px #fff;
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: #fff;
+  transition: all 500ms;
+}
+#home .slider-container .slider .item .slider-presentation .link .red:hover {
+  box-shadow: 1px 1px 5px #93160a;
+  background-color: #93160a;
+  border: #93160a;
+}
+#home .slider-container .slider .item .slider-presentation .link .blue:hover {
+  box-shadow: 1px 1px 5px #110983;
+  background-color: #110983;
+  border: #110983;
+}
+#home .slider-container .controllers {
+  width: 100%;
+  float: left;
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  padding: 0% 2%;
+  background-color: transparent;
+}
+#home .slider-container .controllers .control {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  font-size: 2em;
+  padding: 0.55em;
+}
+#home .slider-container .controllers .prev {
+  color: #fff;
+  float: left;
+  box-shadow: 0px 0px 5px #7b1208;
+}
+#home .slider-container .controllers .next {
+  float: right;
+  color: #fff;
+  box-shadow: 0px 0px 5px #0e086e;
+}
+#school {
+  width: 100%;
+  float: left;
+  padding: 1% 5%;
+  border-bottom: solid 1px #808080;
+}
+#school .school-content {
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+#school .school-content h2 {
+  font-family: 'Ubuntu';
+  color: #555;
+  font-size: 2.2em;
+  margin: 0;
+}
+#school .school-content h2 span {
+  color: #ef2917;
+}
+#school .school-content .school-divider {
+  width: 33.333%;
+  float: left;
+  padding: 1%;
+  text-align: center;
+  transition: all 500ms;
+  font-weight: 600;
+}
+#school .school-content .school-divider .divider-presentation {
+  width: 100%;
+  float: left;
+}
+#school .school-content .school-divider .divider-presentation .fa {
+  font-size: 3em;
+  padding: 1em;
+  border-radius: 50%;
+  border: solid 2px #ef2917;
+  color: #ef2917;
+}
+#school .school-content .school-divider .divider-presentation h3 {
+  font-family: 'Ubuntu';
+  color: #ef2917;
+  font-size: 1.7em;
+  padding: 1%;
+}
+#school .school-content .school-divider .divider-content {
+  width: 100%;
+  float: left;
+  font-family: 'Roboto';
+  color: #959595;
+  font-weight: 300;
+}
+#school .school-content .school-divider .divider-content .divider-link {
+  width: 100%;
+  float: left;
+  margin-top: 5%;
+}
+#school .school-content .school-divider .divider-content .divider-link a {
+  padding: 0.2em 1em;
+  color: #ef2917;
+  border: solid 2px #ef2917;
+  text-decoration: none;
+  font-family: 'Ubuntu';
+  transition: all 500ms;
+  border-radius: 4px;
+}
+#school .school-content .school-divider .divider-content .divider-link a span {
+  margin: 0% 1%;
+}
+#school .school-content .school-divider .divider-content .divider-link a:hover {
+  color: #fff;
+  background-color: #ef2917;
+  box-shadow: 1px 1px 5px #ef2917;
+}
+#method {
+  width: 100%;
+  float: left;
+  background-image: url("../img/parallax5.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+#method .method-shadow {
+  width: 100%;
+  float: left;
+  height: 100%;
+  background-color: rgba(255,255,255,0.7);
+  padding: 2% 5%;
+}
+#method .method-shadow .method-content {
+  width: 100%;
+  float: left;
+}
+#method .method-shadow .method-content .method-presentation {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+#method .method-shadow .method-content .method-presentation h2 {
+  font-family: 'Ubuntu';
+  font-size: 2.2em;
+  color: rgba(0,0,0,0.7);
+}
+#method .method-shadow .method-content .method-presentation h2 span {
+  color: #110983;
+}
+#method .method-shadow .method-content .method-excerpt {
+  width: 60%;
+  float: left;
+  padding: 1%;
+  border-right: solid 1px rgba(0,0,0,0.7);
+}
+#method .method-shadow .method-content .method-excerpt .tipping {
+  font-size: 1.2em;
+  font-family: 'Roboto';
+  color: rgba(0,0,0,0.9);
+  font-weight: 300;
+  line-height: 1.3em;
+}
+#method .method-shadow .method-content .method-excerpt .tipping span {
+  color: #110983;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+}
+#method .method-shadow .method-content .method-links {
+  width: 40%;
+  float: left;
+  padding: 25% 7% 3% 7%;
+}
+#method .method-shadow .method-content .method-links a {
+  width: 100%;
+  float: left;
+  margin: 2% 0%;
+}
+#method .method-shadow .method-content .method-links a .link {
+  width: 100%;
+  float: left;
+  padding: 2% 0%;
+  text-align: center;
+  border: solid 2px #110983;
+  color: #110983;
+  font-family: 'Ubuntu';
+  border-radius: 10px;
+  position: relative;
+  transition: all 500ms;
+}
+#method .method-shadow .method-content .method-links a .link:hover {
+  background-color: #110983;
+  box-shadow: 0px 0px 5px #110983;
+  color: #fff;
+}
+#method .method-shadow .method-content .method-links a .link:hover i {
+  color: #fff;
+}
+#method .method-shadow .method-content .method-links a .link span {
+  text-align: center;
+}
+#method .method-shadow .method-content .method-links a .link i {
+  position: absolute;
+  left: 15px;
+  color: transparent;
+  transition: 500ms;
+  font-size: 1.2em;
+}
+#teachers {
+  width: 100%;
+  float: left;
+  padding: 2% 5%;
+}
+#teachers .teachers-presentation {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+#teachers .teachers-presentation h2 {
+  font-family: 'Ubuntu';
+  font-size: 2.2em;
+  color: rgba(0,0,0,0.7);
+}
+#teachers .teachers-presentation h2 span {
+  color: #ef2917;
+}
+#teachers .teachers-content {
+  width: 100%;
+  float: left;
+  padding: 2% 0%;
+  text-align: center;
+}
+#teachers .teachers-content .teachers-profile {
+  width: 25%;
+  float: left;
+  padding: 2%;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic {
+  width: 15em;
+  height: 15em;
+  border: solid 2px #ef2917;
+  margin: 0% auto;
+  border-radius: 50%;
+  background-image: url("../img/teacher5.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow {
+  width: 100%;
+  float: left;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  padding: 60% 10% 20% 10%;
+  border-radius: 50%;
+  transition: all 500ms;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow:hover {
+  opacity: 1;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social {
+  width: 33.333%;
+  float: left;
+  text-align: center;
+  transition: all 500ms;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social a {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  transition: all 500ms;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social a:hover {
+  background-color: #ef2917;
+  border: #ef2917;
+  box-shadow: 0px 0px 5px #ef2917;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social .fa-facebook {
+  padding: 1em 1.2em;
+}
+#teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social .fa-linkedin {
+  padding: 1em 1.05em;
+}
+#teachers .teachers-content .teachers-profile .teachers-name {
+  width: 100%;
+  float: left;
+  margin: 1% 0% 5% 0%;
+}
+#teachers .teachers-content .teachers-profile .teachers-name span {
+  font-family: 'Ubuntu';
+  color: #ef2917;
+  font-size: 1.5em;
+}
+#teachers .teachers-content .teachers-profile .teachers-excerpt {
+  width: 100%;
+  float: left;
+  margin: 1% 0% 5% 0%;
+}
+#teachers .teachers-content .teachers-profile .teachers-excerpt span {
+  font-family: 'Roboto';
+  font-size: 1em;
+  color: #6e6e6e;
+}
+#contact {
+  width: 100%;
+  float: left;
+  padding: 2% 5%;
+}
+#contact .contact-presentation {
+  width: 100%;
+  float: left;
+}
+#contact .contact-presentation h2 {
+  font-size: 2.2em;
+  font-family: 'Ubuntu';
+  color: rgba(0,0,0,0.7);
+}
+#contact .contact-presentation h2 span {
+  color: #110983;
+}
+#contact .contact-content {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+#contact .contact-content .contact-left {
+  width: 70%;
+  float: left;
+  padding: 2% 0%;
+  border-right: solid 1px #110983;
+}
+#contact .contact-content .contact-left .contact-info {
+  width: 33.333%;
+  float: left;
+  color: #6e6e6e;
+  font-family: 'Roboto';
+  transition: all 500ms;
+}
+#contact .contact-content .contact-left .contact-info:hover {
+  color: #110983;
+}
+#contact .contact-content .contact-left .center {
+  border-right: solid 1px #110983;
+  border-left: solid 1px #110983;
+}
+#contact .contact-content .contact-left .contact-social {
+  width: 100%;
+  float: left;
+  margin: 2% 0% 0% 0%;
+}
+#contact .contact-content .contact-left .contact-social .contact-social-icon {
+  width: 25%;
+  float: left;
+  padding: 2% 0% 1% 0%;
+}
+#contact .contact-content .contact-left .contact-social .contact-social-icon .fa {
+  text-decoration: none;
+  color: #110983;
+  padding: 1em;
+  border: solid 1px #110983;
+  border-radius: 50%;
+  transition: all 500ms;
+  font-size: 1.8em;
+}
+#contact .contact-content .contact-left .contact-social .contact-social-icon .fa:hover {
+  background-color: #110983;
+  box-shadow: 0px 0px 5px #110983;
+  color: #fff;
+}
+#contact .contact-content .contact-left .contact-social .contact-social-icon .fa-facebook {
+  padding: 1em 1.2em;
+}
+#contact .contact-content .contact-left .contact-social .contact-social-icon .fa-linkedin {
+  padding: 1em 1.05em;
+}
+#contact .contact-content .contact-left .contact-social .contact-social-icon .fa-youtube {
+  padding: 1.05em;
+}
+#contact .contact-content .contact-right {
+  width: 30%;
+  float: left;
+  padding: 1%;
+}
