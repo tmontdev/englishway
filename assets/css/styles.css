@@ -21,7 +21,6 @@ body left 0 a {
 #header {
   width: 100%;
   float: left;
-  position: fixed;
   box-shadow: 1px 1px 10px #000;
   z-index: 99;
 }
@@ -55,7 +54,7 @@ body left 0 a {
   width: 100%;
   float: left;
   padding: 0% 5%;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.5);
 }
 #header .header-bar .header-logo {
   width: 12%;
@@ -112,6 +111,12 @@ body left 0 a {
 }
 #header .header-bar .header-menu nav ul li a:hover:after {
   background-color: #0e086e;
+}
+#header .header-bar-fixed {
+  position: fixed;
+  z-index: 999;
+  display: block;
+  background-color: #fff;
 }
 #home {
   width: 100%;

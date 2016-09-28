@@ -26,7 +26,6 @@ body
 #header
         width 100%
         float left
-        position fixed
         box-shadow 1px 1px 10px black
         z-index 99
         .header-st-row
@@ -54,7 +53,7 @@ body
                 width 100%
                 float left
                 padding 0% 5%
-                background-color rgba(255, 255, 255, 0.9);
+                background-color rgba(255, 255, 255, 0.5);
                 .header-logo
                         width 12%
                         float left
@@ -102,6 +101,12 @@ body
                                                                 color darken($blue, 50%)
                                                                 &:after
                                                                         background-color darken($blue, 50%)
+        .header-bar-fixed
+                position fixed
+                z-index 999
+                display block
+                background-color white
+
 #home
         width 100%
         float left
