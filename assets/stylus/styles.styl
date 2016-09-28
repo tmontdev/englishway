@@ -10,8 +10,7 @@ $font2 = 'Roboto'
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-.slick-track
-        height 100vh
+
 body
 	width 100%
 	float left
@@ -22,12 +21,10 @@ body
         a
                 text-decoration:  none;
                 color white
-
 #header
         width 100%
         float left
-        box-shadow 1px 1px 10px black
-        z-index 99
+        z-index 999
         .header-st-row
                 width 100%
                 float left
@@ -54,6 +51,8 @@ body
                 float left
                 padding 0% 5%
                 background-color rgba(255, 255, 255, 0.5);
+                box-shadow 1px 1px 10px black
+                z-index 999
                 .header-logo
                         width 12%
                         float left
@@ -77,8 +76,7 @@ body
                                                 transition all 200ms
                                                 padding 0
                                                 text-align center
-
-                                                a
+                                                .page-scroll
                                                         text-decoration none
                                                         color darken($red, 20%)
                                                         font-family $font2
@@ -97,14 +95,16 @@ body
                                                                 left 1px
                                                                 position absolute
                                                                 transition all 500ms
-                                                        &:hover
-                                                                color darken($blue, 50%)
-                                                                &:after
-                                                                        background-color darken($blue, 50%)
+                                                .active
+                                                        color darken($blue, 50%)
+                                                        &:after
+                                                                background-color darken($blue, 50%)
+
         .header-bar-fixed
                 position fixed
                 z-index 999
-                display block
+                right 0
+                left 0
                 background-color white
 
 #home
@@ -205,7 +205,7 @@ body
 #school
         width 100%
         float left
-        padding 1% 5%
+        padding 0% 5% 5% 5%
         border-bottom solid 1px grey
         .school-content
                 width 100%
@@ -214,6 +214,7 @@ body
                 margin 0
                 h2
                         font-family $font1
+                        padding-top 2%
                         color #555555
                         font-size 2.2em
                         span
@@ -276,7 +277,7 @@ body
                 float  left
                 height 100%
                 background-color rgba(255, 255, 255, 0.7);
-                padding 2% 5%
+                padding 2% 5% 0% 5%
                 .method-content
                         width 100%
                         float left
@@ -342,7 +343,7 @@ body
 #teachers
         width 100%
         float left
-        padding 2% 5%
+        padding 2% 5% 0% 5%
         .teachers-presentation
                 width 100%
                 float left
@@ -414,7 +415,7 @@ body
                         .teachers-excerpt
                                 width 100%
                                 float left
-                                margin 1% 0% 5% 0%
+                                margin 1% 0% 0% 0%
                                 span
                                         font-family $font2
                                         font-size 1em

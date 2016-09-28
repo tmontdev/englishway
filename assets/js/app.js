@@ -19,22 +19,76 @@ $(document).ready(function(){
 
 new WOW().init();
 
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.page-scroll').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.page-scroll').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+
+
+
 $(function(){
-        var header = $('.header-bar');
-        var home = $('#home');
+        var headerHeight = $('.header-bar').height();
         var st = $('.header-st-row').height();
-        var headerDistance = $('.header-bar').height();
+        var sliderHeight = $('.slider').height() - headerHeight;
+        sliderHeight = sliderHeight - st;
+        $('.slick-track').css("height", sliderHeight+"px");
+        $('.slider-container').css("height", sliderHeight+st+"px");
+
+        $('.page-scroll').hover(function() {
+                $(this).addClass("active");
+        }, function() {
+                $(this).removeClass("active");
+        });
+
 
         $(window).scroll(function(){
                 if($(this).scrollTop() > st){
-                        $('.distance').css("margin-top", headerDistance+"px");
-                        header.addClass("header-bar-fixed");
-                        home.addClass("distance");
-
+                        $('.distance').css("padding-top", headerHeight+"px");
+                        $('.header-bar').addClass("header-bar-fixed");
+                        $('#home').addClass("distance");
+                        $('.school-content').addClass("distance");
+                        $('.method-content').addClass("distance");
+                        $('.teachers-presentation').addClass("distance");
+                        $('.contact-presentation').addClass("distance");
 
                 }else{
-                        header.removeClass("header-bar-fixed");
-                        $('.distance').css("margin-top", "0px");
+                        $('.header-bar').removeClass("header-bar-fixed");
+                        $('.distance').css("padding-top", "0px");
                 }
 
         });

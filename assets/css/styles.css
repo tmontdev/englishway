@@ -4,9 +4,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.slick-track {
-  height: 100vh;
-}
 body {
   width: 100%;
   float: left;
@@ -21,8 +18,7 @@ body left 0 a {
 #header {
   width: 100%;
   float: left;
-  box-shadow: 1px 1px 10px #000;
-  z-index: 99;
+  z-index: 999;
 }
 #header .header-st-row {
   width: 100%;
@@ -55,6 +51,8 @@ body left 0 a {
   float: left;
   padding: 0% 5%;
   background-color: rgba(255,255,255,0.5);
+  box-shadow: 1px 1px 10px #000;
+  z-index: 999;
 }
 #header .header-bar .header-logo {
   width: 12%;
@@ -85,7 +83,7 @@ body left 0 a {
   padding: 0;
   text-align: center;
 }
-#header .header-bar .header-menu nav ul li a {
+#header .header-bar .header-menu nav ul li .page-scroll {
   text-decoration: none;
   color: #c41d0e;
   font-family: 'Roboto';
@@ -96,7 +94,7 @@ body left 0 a {
   padding: 1%;
   position: relative;
 }
-#header .header-bar .header-menu nav ul li a:after {
+#header .header-bar .header-menu nav ul li .page-scroll:after {
   content: " ";
   width: 50px;
   height: 2px;
@@ -106,16 +104,17 @@ body left 0 a {
   position: absolute;
   transition: all 500ms;
 }
-#header .header-bar .header-menu nav ul li a:hover {
+#header .header-bar .header-menu nav ul li .active {
   color: #0e086e;
 }
-#header .header-bar .header-menu nav ul li a:hover:after {
+#header .header-bar .header-menu nav ul li .active:after {
   background-color: #0e086e;
 }
 #header .header-bar-fixed {
   position: fixed;
   z-index: 999;
-  display: block;
+  right: 0;
+  left: 0;
   background-color: #fff;
 }
 #home {
@@ -231,7 +230,7 @@ body left 0 a {
 #school {
   width: 100%;
   float: left;
-  padding: 1% 5%;
+  padding: 0% 5% 5% 5%;
   border-bottom: solid 1px #808080;
 }
 #school .school-content {
@@ -242,6 +241,7 @@ body left 0 a {
 }
 #school .school-content h2 {
   font-family: 'Ubuntu';
+  padding-top: 2%;
   color: #555;
   font-size: 2.2em;
   margin: 0;
@@ -315,7 +315,7 @@ body left 0 a {
   float: left;
   height: 100%;
   background-color: rgba(255,255,255,0.7);
-  padding: 2% 5%;
+  padding: 2% 5% 0% 5%;
 }
 #method .method-shadow .method-content {
   width: 100%;
@@ -395,7 +395,7 @@ body left 0 a {
 #teachers {
   width: 100%;
   float: left;
-  padding: 2% 5%;
+  padding: 2% 5% 0% 5%;
 }
 #teachers .teachers-presentation {
   width: 100%;
@@ -483,7 +483,7 @@ body left 0 a {
 #teachers .teachers-content .teachers-profile .teachers-excerpt {
   width: 100%;
   float: left;
-  margin: 1% 0% 5% 0%;
+  margin: 1% 0% 0% 0%;
 }
 #teachers .teachers-content .teachers-profile .teachers-excerpt span {
   font-family: 'Roboto';
