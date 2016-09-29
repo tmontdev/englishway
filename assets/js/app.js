@@ -34,7 +34,6 @@ $(document).ready(function () {
         $(this).addClass('active');
 
         var target = this.hash,
-            menu = target;
         $target = $(target);
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top - $('.header-bar').height()

@@ -545,6 +545,7 @@ body left 0 a {
   width: 100%;
   float: left;
   padding: 2% 5%;
+  background-color: rgba(128,128,128,0.1);
 }
 #contact .contact-presentation {
   width: 100%;
@@ -563,69 +564,127 @@ body left 0 a {
   float: left;
   text-align: center;
 }
-#contact .contact-content .contact-left {
-  width: 70%;
-  float: left;
-  padding: 2% 0%;
-  border-right: solid 1px #110983;
-}
-#contact .contact-content .contact-left .contact-info {
-  width: 33.333%;
-  float: left;
-  color: #6e6e6e;
-  font-family: 'Roboto';
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  -o-transition: all 500ms;
-}
-#contact .contact-content .contact-left .contact-info:hover {
-  color: #110983;
-}
-#contact .contact-content .contact-left .center {
-  border-right: solid 1px #110983;
-  border-left: solid 1px #110983;
-}
-#contact .contact-content .contact-left .contact-social {
+#contact .contact-content .whole {
   width: 100%;
   float: left;
-  margin: 2% 0% 0% 0%;
 }
-#contact .contact-content .contact-left .contact-social .contact-social-icon {
-  width: 25%;
+#contact .contact-content .whole .description {
+  width: 100%;
   float: left;
-  padding: 2% 0% 1% 0%;
+  font-size: 1em;
+  font-family: 'Ubuntu';
 }
-#contact .contact-content .contact-left .contact-social .contact-social-icon .fa {
+#contact .contact-content .whole .description .left {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+#contact .contact-content .whole .description .right {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-family: 'Roboto';
+}
+#contact .contact-content .whole .contact-form {
+  width: 100%;
+  float: left;
+  padding: 1% 20%;
+}
+#contact .contact-content .whole .contact-form .form {
+  width: 100%;
+  float: left;
+}
+#contact .contact-content .whole .contact-form .form .half-square {
+  width: 50%;
+  float: left;
+  padding: 1%;
+}
+#contact .contact-content .whole .contact-form .form .half-square input {
+  width: 100%;
+  float: left;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 0% 1%;
+  border: solid 1px #110983;
+  border-radius: 3px;
+}
+#contact .contact-content .whole .contact-form .form .square {
+  width: 100%;
+  float: left;
+  padding: 1%;
+}
+#contact .contact-content .whole .contact-form .form .square textarea {
+  width: 100%;
+  line-height: 40px;
+  font-size: 20px;
+  height: 200px;
+  float: left;
+  padding: 1%;
+  border: solid 1px #110983;
+  border-radius: 3px;
+}
+#contact .contact-content .whole .contact-form .form .square input {
+  width: 100%;
+  float: left;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 0% 1%;
+  border: solid 1px #110983;
+  border-radius: 3px;
+}
+#contact .contact-content .half {
+  width: 50%;
+  float: left;
+  padding: 1%;
+}
+#contact .contact-content .half .description {
+  width: 100%;
+  float: left;
+  font-size: 1.3em;
+  margin: 1% 0%;
+  font-family: 'Ubuntu';
+}
+#contact .contact-content .half .social-row {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 4% 0%;
+}
+#contact .contact-content .half .social-row a {
   text-decoration: none;
   color: #110983;
-  padding: 1em;
-  border: solid 1px #110983;
-  border-radius: 50%;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  -o-transition: all 500ms;
-  font-size: 1.8em;
+  text-align: center;
+  display: inline-block;
 }
-#contact .contact-content .contact-left .contact-social .contact-social-icon .fa:hover {
+#contact .contact-content .half .social-row a .contact-social-icon {
+  width: 4.5em;
+  height: 4.5em;
+  border: 1px solid #110983;
+  border-radius: 50%;
+  margin: 2% 20%;
+}
+#contact .contact-content .half .social-row a .contact-social-icon:hover {
   background-color: #110983;
   box-shadow: 0px 0px 5px #110983;
   color: #fff;
 }
-#contact .contact-content .contact-left .contact-social .contact-social-icon .fa-facebook {
-  padding: 1em 1.2em;
+#contact .contact-content .half .social-row a .contact-social-icon span {
+  font-size: 2em;
+  padding: 25%;
 }
-#contact .contact-content .contact-left .contact-social .contact-social-icon .fa-linkedin {
-  padding: 1em 1.05em;
-}
-#contact .contact-content .contact-left .contact-social .contact-social-icon .fa-youtube {
-  padding: 1.05em;
-}
-#contact .contact-content .contact-right {
-  width: 30%;
+#contact .contact-content .half .contact-large {
+  width: 100%;
   float: left;
-  padding: 1%;
+}
+#contact .phone .ph {
+  font-family: 'Ubuntu';
+}
+#contact .phone .e {
+  width: 100%;
+  float: left;
+}
+#contact .phone iframe {
+  width: 80%;
+  float: left;
+  margin: 0% 10%;
 }
