@@ -19,6 +19,9 @@ body left 0 a {
   width: 100%;
   float: left;
   z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #header .header-st-row {
   width: 100%;
@@ -53,6 +56,11 @@ body left 0 a {
   background-color: rgba(255,255,255,0.5);
   box-shadow: 1px 1px 10px #000;
   z-index: 999;
+  transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
 }
 #header .header-bar .header-logo {
   width: 12%;
@@ -80,6 +88,10 @@ body left 0 a {
   display: inline-block;
   margin: 0% 25px;
   transition: all 200ms;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
   padding: 0;
   text-align: center;
 }
@@ -90,6 +102,10 @@ body left 0 a {
   text-transform: uppercase;
   font-size: 1.2em;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
   font-weight: 600;
   padding: 1%;
   position: relative;
@@ -103,6 +119,10 @@ body left 0 a {
   left: 1px;
   position: absolute;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #header .header-bar .header-menu nav ul li .active {
   color: #0e086e;
@@ -113,7 +133,7 @@ body left 0 a {
 #header .header-bar-fixed {
   position: fixed;
   z-index: 999;
-  right: 0;
+  top: 0;
   left: 0;
   background-color: #fff;
 }
@@ -128,7 +148,6 @@ body left 0 a {
 #home .slider-container .slider {
   width: 100%;
   float: left;
-  height: 100vh;
 }
 #home .slider-container .slider .slider1 {
   background-image: url("../img/slide1.jpg");
@@ -148,7 +167,7 @@ body left 0 a {
 #home .slider-container .slider .item {
   width: 100%;
   float: left;
-  height: 100%;
+  height: 100vh;
 }
 #home .slider-container .slider .item .slider-shadow {
   width: 100%;
@@ -190,6 +209,10 @@ body left 0 a {
   font-family: 'Roboto';
   color: #fff;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #home .slider-container .slider .item .slider-presentation .link .red:hover {
   box-shadow: 1px 1px 5px #93160a;
@@ -255,6 +278,10 @@ body left 0 a {
   padding: 1%;
   text-align: center;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
   font-weight: 600;
 }
 #school .school-content .school-divider .divider-presentation {
@@ -293,6 +320,10 @@ body left 0 a {
   text-decoration: none;
   font-family: 'Ubuntu';
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
   border-radius: 4px;
 }
 #school .school-content .school-divider .divider-content .divider-link a span {
@@ -373,6 +404,10 @@ body left 0 a {
   border-radius: 10px;
   position: relative;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #method .method-shadow .method-content .method-links a .link:hover {
   background-color: #110983;
@@ -390,6 +425,10 @@ body left 0 a {
   left: 15px;
   color: transparent;
   transition: 500ms;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
   font-size: 1.2em;
 }
 #teachers {
@@ -440,6 +479,10 @@ body left 0 a {
   padding: 60% 10% 20% 10%;
   border-radius: 50%;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow:hover {
   opacity: 1;
@@ -449,6 +492,10 @@ body left 0 a {
   float: left;
   text-align: center;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social a {
   font-size: 1em;
@@ -458,6 +505,10 @@ body left 0 a {
   border-radius: 50%;
   border: solid 1px #fff;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow .teachers-social a:hover {
   background-color: #ef2917;
@@ -524,6 +575,10 @@ body left 0 a {
   color: #6e6e6e;
   font-family: 'Roboto';
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 #contact .contact-content .contact-left .contact-info:hover {
   color: #110983;
@@ -549,6 +604,10 @@ body left 0 a {
   border: solid 1px #110983;
   border-radius: 50%;
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
   font-size: 1.8em;
 }
 #contact .contact-content .contact-left .contact-social .contact-social-icon .fa:hover {

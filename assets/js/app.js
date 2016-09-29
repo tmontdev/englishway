@@ -23,9 +23,10 @@ $(document).ready(function () {
     $(document).on("scroll", onScroll);
 
     //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
+    $('a.page-scroll').on('click', function (e) { // ^= que contem
+            var headerHeight = $('.header-bar').height();
         e.preventDefault();
-        $(document).off("scroll");
+        //$(document).off("scroll");
 
         $('a').each(function () {
             $(this).removeClass('active');
@@ -36,11 +37,8 @@ $(document).ready(function () {
             menu = target;
         $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
+            'scrollTop': $target.offset().top - $('.header-bar').height()
+    }, 500, 'swing');
     });
 });
 
@@ -66,8 +64,7 @@ $(function(){
         var st = $('.header-st-row').height();
         var sliderHeight = $('.slider').height() - headerHeight;
         sliderHeight = sliderHeight - st;
-        $('.slick-track').css("height", sliderHeight+"px");
-        $('.slider-container').css("height", sliderHeight+st+"px");
+
 
         $('.page-scroll').hover(function() {
                 $(this).addClass("active");
@@ -78,17 +75,9 @@ $(function(){
 
         $(window).scroll(function(){
                 if($(this).scrollTop() > st){
-                        $('.distance').css("padding-top", headerHeight+"px");
                         $('.header-bar').addClass("header-bar-fixed");
-                        $('#home').addClass("distance");
-                        $('.school-content').addClass("distance");
-                        $('.method-content').addClass("distance");
-                        $('.teachers-presentation').addClass("distance");
-                        $('.contact-presentation').addClass("distance");
-
                 }else{
                         $('.header-bar').removeClass("header-bar-fixed");
-                        $('.distance').css("padding-top", "0px");
                 }
 
         });

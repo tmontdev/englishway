@@ -1,3 +1,9 @@
+transition()
+        transition arguments
+        -webkit-transition arguments
+        -moz-transition arguments
+        -ms-transition arguments
+        -o-transition arguments
 $red = #EF2917
 $blue = #1C0FDB
 
@@ -25,6 +31,9 @@ body
         width 100%
         float left
         z-index 999
+        position absolute
+        top 0
+        left 0
         .header-st-row
                 width 100%
                 float left
@@ -53,6 +62,7 @@ body
                 background-color rgba(255, 255, 255, 0.5);
                 box-shadow 1px 1px 10px black
                 z-index 999
+                transition all 250ms ease-in-out
                 .header-logo
                         width 12%
                         float left
@@ -103,7 +113,7 @@ body
         .header-bar-fixed
                 position fixed
                 z-index 999
-                right 0
+                top 0
                 left 0
                 background-color white
 
@@ -116,7 +126,6 @@ body
                 .slider
                         width 100%
                         float left
-                        height 100vh
                         .slider1
                                 background-image: url(../img/slide1.jpg);
                                 background-size cover
@@ -132,7 +141,7 @@ body
                         .item
                                 width 100%
                                 float left
-                                height: 100%
+                                height 100vh
                                 .slider-shadow
                                         width 100%
                                         float: left;
