@@ -44,6 +44,12 @@ body left 0 a {
   color: #fff;
   margin: 1%;
 }
+#header .header-st-row .st-divider .nd-divider a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #fff;
+  margin: 1%;
+}
 #header .header-st-row .st-divider .nd-divider i {
   color: #fff;
   font-size: 1em;
@@ -202,7 +208,7 @@ body left 0 a {
   float: left;
   margin: 6% 0% 0% 0%;
 }
-#home .slider-container .slider .item .slider-presentation .link a {
+#home .slider-container .slider .item .slider-presentation .link .page-scroll {
   padding: 1% 2%;
   border: solid 2px #fff;
   text-decoration: none;
@@ -594,6 +600,29 @@ body left 0 a {
   width: 100%;
   float: left;
 }
+#contact .contact-content .whole .contact-form .form .send-button {
+  width: 100%;
+  float: left;
+  padding: 0% 40%;
+  text-align: center;
+}
+#contact .contact-content .whole .contact-form .form .send-button button {
+  width: 100%;
+  float: left;
+  line-height: 25px;
+  font-size: 15px;
+  color: #110983;
+  border: solid 1px #110983;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+}
+#contact .contact-content .whole .contact-form .form .send-button button:hover {
+  background-color: #110983;
+  color: #fff;
+}
 #contact .contact-content .whole .contact-form .form .half-square {
   width: 50%;
   float: left;
@@ -603,8 +632,8 @@ body left 0 a {
   width: 100%;
   float: left;
   line-height: 40px;
-  font-size: 20px;
-  padding: 0% 1%;
+  font-size: 15px;
+  padding: 0% 5%;
   border: solid 1px #110983;
   border-radius: 3px;
 }
@@ -616,7 +645,7 @@ body left 0 a {
 #contact .contact-content .whole .contact-form .form .square textarea {
   width: 100%;
   line-height: 40px;
-  font-size: 20px;
+  font-size: 15px;
   height: 200px;
   float: left;
   padding: 1%;
@@ -627,8 +656,8 @@ body left 0 a {
   width: 100%;
   float: left;
   line-height: 40px;
-  font-size: 20px;
-  padding: 0% 1%;
+  font-size: 15px;
+  padding: 0% 2.5%;
   border: solid 1px #110983;
   border-radius: 3px;
 }
@@ -687,4 +716,16 @@ body left 0 a {
   width: 80%;
   float: left;
   margin: 0% 10%;
+}
+footer {
+  width: 100%;
+  float: left;
+  padding: 1% 5%;
+  text-align: center;
+  background-color: #110983;
+}
+footer span {
+  font-family: 'Roboto';
+  font-size: 1em;
+  color: #fff;
 }

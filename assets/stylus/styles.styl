@@ -51,6 +51,11 @@ body
                                         font-size 0.9em
                                         color white
                                         margin 1%
+                                a
+                                        text-decoration none
+                                        font-size 0.9em
+                                        color white
+                                        margin 1%
                                 i
                                         color white
                                         font-size 1em
@@ -170,7 +175,7 @@ body
                                                 width 100%
                                                 float left
                                                 margin 6% 0% 0% 0%
-                                                a
+                                                .page-scroll
                                                         padding 1% 2%
                                                         border solid 2px white
                                                         text-decoration none
@@ -471,6 +476,23 @@ body
                                 .form
                                         width 100%
                                         float left
+                                        .send-button
+                                                width 100%
+                                                float left
+                                                padding 0% 40%
+                                                text-align center
+                                                button
+                                                        width 100%
+                                                        float left
+                                                        line-height: 25px
+                                                        font-size 15px
+                                                        color darken($blue, 40%)
+                                                        border solid 1px darken($blue, 40%)
+                                                        transition all 500ms
+                                                        &:hover
+                                                                background-color darken($blue, 40%)
+                                                                color white
+
                                         .half-square
                                                 width 50%
                                                 float left
@@ -479,8 +501,8 @@ body
                                                         width 100%
                                                         float left
                                                         line-height: 40px
-                                                        font-size 20px
-                                                        padding 0% 1%
+                                                        font-size 15px
+                                                        padding 0% 5%
                                                         border solid 1px darken($blue, 40%)
                                                         border-radius 3px
                                         .square
@@ -490,7 +512,7 @@ body
                                                 textarea
                                                         width 100%
                                                         line-height: 40px
-                                                        font-size 20px
+                                                        font-size 15px
                                                         height 200px
                                                         float left
                                                         padding 1%
@@ -500,8 +522,8 @@ body
                                                         width 100%
                                                         float left
                                                         line-height: 40px
-                                                        font-size 20px
-                                                        padding 0% 1%
+                                                        font-size 15px
+                                                        padding 0% 2.5%
                                                         border solid 1px darken($blue, 40%)
                                                         border-radius 3px
                 .half
@@ -550,3 +572,13 @@ body
                         width 80%
                         float left
                         margin  0% 10%
+footer
+        width 100%
+        float left
+        padding 1% 5%
+        text-align center
+        background-color darken($blue, 40%)
+        span
+                font-family: $font2
+                font-size 1em
+                color white
