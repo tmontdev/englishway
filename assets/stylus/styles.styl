@@ -1,7 +1,14 @@
+transition()
+        transition arguments
+        -webkit-transition arguments
+        -moz-transition arguments
+        -ms-transition arguments
+        -o-transition arguments
 $red = #EF2917
 $blue = #1C0FDB
 
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,300|Ubuntu:300,400,600';
+
 $font1 = 'Ubuntu'
 $font2 = 'Roboto'
 
@@ -10,6 +17,14 @@ $font2 = 'Roboto'
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
 
 body
 	width 100%
@@ -25,6 +40,9 @@ body
         width 100%
         float left
         z-index 999
+        position absolute
+        top 0
+        left 0
         .header-st-row
                 width 100%
                 float left
@@ -33,19 +51,22 @@ body
                 padding 0% 5%
                 background-color: darken($blue, 50%)
                 .st-divider
-                        width 50%
+                        width 33.333%
                         float left
-                        .nd-divider
-                                width 50%
-                                float left
-                                span
-                                        font-size 0.9em
-                                        color white
-                                        margin 1%
-                                i
-                                        color white
-                                        font-size 1em
-                                        margin 1%
+                        text-align center
+                        span
+                                font-size 0.9em
+                                color white
+                                margin 1%
+                        a
+                                text-decoration none
+                                font-size 0.9em
+                                color white
+                                margin 1%
+                        i
+                                color white
+                                font-size 1em
+                                margin 1%
         .header-bar
                 width 100%
                 float left
@@ -53,6 +74,7 @@ body
                 background-color rgba(255, 255, 255, 0.5);
                 box-shadow 1px 1px 10px black
                 z-index 999
+                transition all 250ms ease-in-out
                 .header-logo
                         width 12%
                         float left
@@ -103,7 +125,7 @@ body
         .header-bar-fixed
                 position fixed
                 z-index 999
-                right 0
+                top 0
                 left 0
                 background-color white
 
@@ -116,7 +138,6 @@ body
                 .slider
                         width 100%
                         float left
-                        height 100vh
                         .slider1
                                 background-image: url(../img/slide1.jpg);
                                 background-size cover
@@ -132,7 +153,7 @@ body
                         .item
                                 width 100%
                                 float left
-                                height: 100%
+                                height 100vh
                                 .slider-shadow
                                         width 100%
                                         float: left;
@@ -161,7 +182,7 @@ body
                                                 width 100%
                                                 float left
                                                 margin 6% 0% 0% 0%
-                                                a
+                                                .page-scroll
                                                         padding 1% 2%
                                                         border solid 2px white
                                                         text-decoration none
@@ -266,6 +287,36 @@ body
                                                         color white
                                                         background-color $red
                                                         box-shadow 1px 1px 5px $red
+                                .modal  /* The Modal (background) */
+                                        display none /* Hidden by default */
+                                        position fixed /* Stay in place */
+                                        z-index 1 /* Sit on top */
+                                        left 0
+                                        top 0
+                                        width 100% /* Full width */
+                                        height 100% /* Full height */
+                                        overflow auto /* Enable scroll if needed */
+                                        background-color rgb(0,0,0) /* Fallback color */
+                                        background-color rgba(0,0,0,0.4) /* Black w/ opacity */
+                                        .modal-content /* Modal Content/Box */
+                                                background-color #fefefe
+                                                margin 15% auto /* 15% from the top and centered */
+                                                padding 20px
+                                                border 1px solid #888
+                                                font-family $font1
+                                                width 80% /* Could be more or less, depending on screen size */
+                                                .close /* The Close Button */
+                                                        color #aaa
+                                                        float: right
+                                                        font-size 28px
+                                                        font-weight bold
+                                                        &:hover, &:focus
+                                                                color black
+                                                                text-decoration none
+                                                                cursor pointer
+                                        h1
+                                                color red
+                                                font-family $font2
 #method
         width 100%
         float left
@@ -292,10 +343,10 @@ body
                                         span
                                             color darken($blue, 40%)
                         .method-excerpt
-                            width 60%
+                            width 100%
                             float left
-                            padding 1%
-                            border-right solid 1px rgba(0, 0, 0, .7)
+                            padding 1% 10%
+                            text-align justify
                             .tipping
                                 font-size 1.2em
                                 font-family $font2
@@ -307,9 +358,9 @@ body
                                     font-family $font1
                                     font-weight 600
                         .method-links
-                            width 40%
+                            width 100%
                             float left
-                            padding 25% 7% 3% 7%
+                            padding 1% 25%
                             a
                                 width 100%
                                 float left
@@ -424,6 +475,7 @@ body
         width 100%
         float left
         padding 2% 5%
+        background-color alpha(grey, 10%)
         .contact-presentation
                 width 100%
                 float left
@@ -437,49 +489,133 @@ body
                 width 100%
                 float left
                 text-align center
-                .contact-left
-                        width 70%
+                .whole
+                        width 100%
                         float left
-                        padding 2% 0%
-                        border-right solid 1px darken($blue, 40%)
-                        .contact-info
-                                width 33.333%
-                                float left
-                                color #6e6e6e
-                                font-family $font2
-                                transition all 500ms
-                                &:hover
-                                        color darken($blue, 40%)
-                        .center
-                                border-right solid 1px darken($blue, 40%)
-                                border-left solid 1px darken($blue, 40%)
-                        .contact-social
+                        .description
                                 width 100%
                                 float left
-                                margin 2% 0% 0% 0%
-                                .contact-social-icon
-                                        width 25%
+                                font-size 1em
+                                font-family $font1
+                                .left
+                                        width 50%
                                         float left
-                                        padding 2%  0% 1% 0%
-                                        .fa
-                                                text-decoration none
-                                                color darken($blue, 40%)
-                                                padding 1em
-                                                border solid 1px darken($blue, 40%)
+                                        text-align left
+                                .right
+                                        width 50%
+                                        float left
+                                        text-align right
+                                        font-family $font2
+                        .contact-form
+                                width 100%
+                                float left
+                                padding 1% 20%
+                                .form
+                                        width 100%
+                                        float left
+                                        .send-button
+                                                width 100%
+                                                float left
+                                                padding 0% 40%
+                                                text-align center
+                                                button
+                                                        width 100%
+                                                        float left
+                                                        line-height: 25px
+                                                        font-size 15px
+                                                        color darken($blue, 40%)
+                                                        border solid 1px darken($blue, 40%)
+                                                        transition all 500ms
+                                                        &:hover
+                                                                background-color darken($blue, 40%)
+                                                                color white
+
+                                        .half-square
+                                                width 50%
+                                                float left
+                                                padding 1%
+                                                input
+                                                        width 100%
+                                                        float left
+                                                        line-height: 40px
+                                                        font-size 15px
+                                                        padding 0% 5%
+                                                        border solid 1px darken($blue, 40%)
+                                                        border-radius 3px
+                                        .square
+                                                width 100%
+                                                float left
+                                                padding 1%
+                                                textarea
+                                                        width 100%
+                                                        line-height: 40px
+                                                        font-size 15px
+                                                        height 200px
+                                                        float left
+                                                        padding 1%
+                                                        border solid 1px darken($blue, 40%)
+                                                        border-radius 3px
+                                                input
+                                                        width 100%
+                                                        float left
+                                                        line-height: 40px
+                                                        font-size 15px
+                                                        padding 0% 2.5%
+                                                        border solid 1px darken($blue, 40%)
+                                                        border-radius 3px
+                .half
+                        width 50%
+                        float left
+                        padding 1%
+                        .description
+                                width 100%
+                                float left
+                                font-size 1.3em
+                                margin 1% 0%
+                                font-family: $font1
+                        .social-row
+                                width 100%
+                                float left
+                                text-align center
+                                margin 4% 0%
+                                a
+                                        text-decoration none
+                                        color darken($blue, 40%)
+                                        text-align center
+                                        display inline-block
+                                        .contact-social-icon
+                                                width 4.5em
+                                                height 4.5em
+                                                border 1px solid darken($blue, 40%)
                                                 border-radius 50%
-                                                transition all 500ms
-                                                font-size 1.8em
+                                                margin 2% 20%
                                                 &:hover
                                                         background-color darken($blue, 40%)
                                                         box-shadow 0px 0px 5px darken($blue, 40%)
                                                         color white
-                                        .fa-facebook
-                                                padding 1em 1.2em
-                                        .fa-linkedin
-                                                padding 1em 1.05em
-                                        .fa-youtube
-                                                padding 1.05em
-                .contact-right
-                        width 30%
+                                                span
+                                                        font-size 2em
+                                                        padding 25%
+                        .contact-large
+                                width 100%
+                                float left
+        .phone
+                .ph
+                        font-family $font1
+                .e
+                        width 100%
                         float left
-                        padding 1%
+                iframe
+                        width 80%
+                        float left
+                        margin  0% 10%
+footer
+        width 100%
+        float left
+        padding 1% 5%
+        text-align center
+        background-color darken($blue, 40%)
+        span
+                font-family: $font2
+                font-size 1em
+                color white
