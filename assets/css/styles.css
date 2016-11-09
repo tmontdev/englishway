@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,300|Ubuntu:300,400,600';
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,600,400,300|Ubuntu:300,400,600';
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -409,6 +409,7 @@ body left 0 a {
   float: left;
   padding: 1% 10%;
   text-align: justify;
+  font-weight: 600;
 }
 #method .method-shadow .method-content .method-excerpt .tipping {
   font-size: 1.2em;
@@ -416,6 +417,7 @@ body left 0 a {
   color: rgba(0,0,0,0.9);
   font-weight: 300;
   line-height: 1.3em;
+  font-weight: 600;
 }
 #method .method-shadow .method-content .method-excerpt .tipping span {
   color: #110983;
