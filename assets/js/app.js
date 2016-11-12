@@ -132,7 +132,7 @@ $(function(){
         $.ajax({
               type: "POST",
               url: "assets/php/sendContact.php",
-              data: dataForm,
+              data: formData,
               dataType: "json",
               cache: false,
               success: function(data){
