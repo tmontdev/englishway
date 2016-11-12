@@ -107,3 +107,40 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+$(function(){
+    var validateForm = true;
+    $('.send-button').click(function(event) {
+        $('.form-item').each(function() {
+           var value = $(this).val();
+           var response = $(this).val().trim().length;
+           if (response == 0) {
+               alert('Preencha o campo'+ $(this).attr('name'));
+               validateForm = false;
+           }
+    });
+    });
+
+    if (validateForm === false) {
+        return false;
+    }
+        var formName = $('.name').val();
+        var formPhone = $('.phone').val();
+        var formMail = $('.mail').val();
+        var formMessage = $('.message').val();
+        var formData = { name: formName, phone:formPhone, email: formEmail, message: formMessage }
+        $.ajax({
+              type: "POST",
+              url: "assets/php/sendContact.php",
+              data: dataForm,
+              dataType: "json",
+              cache: false,
+              success: function(data){
+                if(data.message != "1")
+                  return alert(data.error);
+
+                alert("Mensagem enviada! Em breve te responderemos");
+              },
+            });
+});
+
