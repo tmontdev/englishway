@@ -126,14 +126,13 @@ $(function(){
     }
         var formName = $('.name').val();
         var formPhone = $('.phone').val();
-        var formMail = $('.mail').val();
+        var formEmail = $('.mail').val();
         var formMessage = $('.message').val();
-        var formData = { name: formName, phone:formPhone, email: formEmail, message: formMessage }
+        var formData = { name: formName, phone:formPhone, email: formEmail, message: formMessage };
         $.ajax({
               type: "POST",
               url: "assets/php/sendContact.php",
               data: formData,
-              dataType: "json",
               cache: false,
               success: function(data){
                 if(data.message != "1")
