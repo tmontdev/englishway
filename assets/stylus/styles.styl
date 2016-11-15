@@ -17,15 +17,34 @@ $font2 = 'Roboto'
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-
+.mobile-header
+    display none
+    //mobile header-line
+    @media(max-width 768px)
+        display block
+        z-index 900
+        position fixed
+        width 100%
+        background-color white
+        height 60px
+        top 0
+        left 0
+        box-shadow 0px 0px 5px black
+        .switch-header
+            z-index 999
+            position fixed
+            top 10px
+            left 10px
+            width 40px
+            height 41px
+            padding 5px
+            border solid 1px black
+            border-radius 4px
+            cursor pointer
+            text-align center
+            display block
+            i
+                font-size 30px
 body
 	width 100%
 	float left
@@ -34,590 +53,714 @@ body
 	top 0
 	left 0
         a
-                text-decoration:  none;
-                color white
+            text-decoration:  none;
+            color white
 #header
-        width 100%
-        float left
-        z-index 999
-        position absolute
+    width 100%
+    float left
+    z-index 999
+    position absolute
+    top 0
+    left 0
+    //header mobile
+    @media(max-width 768px)
+        display none
+        width 70%
+        position fixed
         top 0
         left 0
+        height 100vh
+        background-color $blue
+        margin 0
+        padding 0
+        z-index 910
         .header-st-row
-                width 100%
+            position absolute
+            padding 0 !important
+            margin 0 !important
+            bottom 0
+            left 0
+            background-color transparent
+            width 100%
+            float left
+            .st-divider
+                width 100% !important
                 float left
-                line-height 30px
-                font-family: $font1
-                padding 0% 5%
-                background-color: darken($blue, 50%)
-                .st-divider
-                        width 33.333%
-                        float left
-                        text-align center
-                        span
-                                font-size 0.9em
-                                color white
-                                margin 1%
-                        a
-                                text-decoration none
-                                font-size 0.9em
-                                color white
-                                margin 1%
-                        i
-                                color white
-                                font-size 1em
-                                margin 1%
-        .header-bar
-                width 100%
-                float left
-                padding 0% 5%
-                background-color rgba(255, 255, 255, 0.5);
-                box-shadow 1px 1px 10px black
-                z-index 999
-                transition all 250ms ease-in-out
-                .header-logo
-                        width 12%
-                        float left
-                        img
-                                width 100%
-                                float left
-                                padding 10%
-                .header-menu
-                        width 88%
-                        float left
-                        text-align center
-                        nav
-                                width 100%
-                                float left
-                                padding 2.5% 0% 0% 0%
-                                ul
-                                        list-style none
-                                        li
-                                                display inline-block
-                                                margin 0% 25px
-                                                transition all 200ms
-                                                padding 0
-                                                text-align center
-                                                .page-scroll
-                                                        text-decoration none
-                                                        color darken($red, 20%)
-                                                        font-family $font2
-                                                        text-transform uppercase
-                                                        font-size 1.2em
-                                                        transition all 500ms
-                                                        font-weight: 600
-                                                        padding 1%
-                                                        position relative
-                                                        &:after
-                                                                content: " "
-                                                                width 50px
-                                                                height 2px
-                                                                background-color transparent
-                                                                bottom 0
-                                                                left 1px
-                                                                position absolute
-                                                                transition all 500ms
-                                                .active
-                                                        color darken($blue, 50%)
-                                                        &:after
-                                                                background-color darken($blue, 50%)
-
-        .header-bar-fixed
-                position fixed
-                z-index 999
-                top 0
-                left 0
-                background-color white
-
-#home
-        width 100%
-        float left
-        .slider-container
-                width 100%
-                float left
-                .slider
-                        width 100%
-                        float left
-                        .slider1
-                                background-image: url(../img/slide1.jpg);
-                                background-size cover
-                                background-position center center
-                        .slider2
-                                background-image: url(../img/slide2.jpg);
-                                background-size cover
-                                background-position center center
-                        .slider3
-                                background-image: url(../img/slide3.jpg);
-                                background-size cover
-                                background-position center center
-                        .item
-                                width 100%
-                                float left
-                                height 100vh
-                                .slider-shadow
-                                        width 100%
-                                        float: left;
-                                        height 100%
-                                        background-color rgba(0, 0, 0, 0.5);
-                                .slider-presentation
-                                        width 100%
-                                        float left
-                                        padding 22% 5% 0% 5%
-                                        text-align center
-                                        .first
-                                                width 100%
-                                                float left
-                                                font-size 3em
-                                                text-shadow 1px 1px 5px black
-                                                font-family $font1
-                                                color white
-                                        .second
-                                                width 100%
-                                                float left
-                                                font-size 1.8em
-                                                font-family $font2
-                                                text-shadow 1px 1px 5px black
-                                                color white
-                                        .link
-                                                width 100%
-                                                float left
-                                                margin 6% 0% 0% 0%
-                                                .page-scroll
-                                                        padding 1% 2%
-                                                        border solid 2px white
-                                                        text-decoration none
-                                                        font-family: $font2
-                                                        color white
-                                                        transition all 500ms
-                                                .red
-                                                        &:hover
-                                                                box-shadow: 1px 1px 5px darken($red, 40%)
-                                                                background-color darken($red, 40%)
-                                                                border darken($red, 40%)
-                                                .blue
-                                                        &:hover
-                                                                box-shadow: 1px 1px 5px darken($blue, 40%)
-                                                                background-color darken($blue, 40%)
-                                                                border darken($blue, 40%)
-
-                .controllers
-                        width 100%
-                        float left
-                        position absolute
-                        top 55%
-                        left 0%
-                        padding 0% 2%
-                        background-color transparent
-                        .control
-                                width 2em
-                                height 2em
-                                border-radius 50%
-                                font-size 2em
-                                padding .55em
-                        .prev
-                                color white
-                                float left
-                                box-shadow 0px 0px 5px darken($red, 50%)
-
-                        .next
-                                float right
-                                color white
-                                box-shadow 0px 0px 5px darken($blue, 50%)
-#school
-        width 100%
-        float left
-        padding 0% 5% 5% 5%
-        border-bottom solid 1px grey
-        .school-content
-                width 100%
-                float left
-                padding 0
                 margin 0
-                h2
-                        font-family $font1
-                        padding-top 2%
-                        color #555555
-                        font-size 2.2em
-                        span
-                                color $red
+                padding 0
+        .header-bar
+            width 100%
+            float left 
+            background-color transparent !important
+            box-shadow none !important 
+            height 85vh
+            padding 0 !important
+            .header-logo
+                width 100% !important
+                padding 0 !important
+                margin 0 !important
+                float left 
+                position relative 
+                height 70px
+                background-color white
+                .logo-img
+                    width 70px !important
+                    position absolute !important
+                    left 70px !important
+                    top 10px !important
+                    padding 0 !important           
 
-                        margin 0
-                .school-divider
+    .header-st-row
+        width 100%
+        float left
+        line-height 30px
+        font-family: $font1
+        padding 0% 5%
+        background-color: darken($blue, 50%)
+        .st-divider
+            width 33.333%
+            float left
+            text-align center
+            span
+                font-size 0.9em
+                color white
+                margin 1%
+            a
+                text-decoration none
+                font-size 0.9em
+                color white
+                margin 1%
+            i
+                color white
+                font-size 1em
+                margin 1%
+    .header-bar
+        width 100%
+        float left
+        padding 0% 5%
+        background-color rgba(255, 255, 255, 0.5);
+        box-shadow 1px 1px 10px black
+        z-index 999
+        transition all 250ms ease-in-out
+        .header-logo
+            width 12%
+            float left
+            img
+                width 100%
+                float left
+                padding 10%
+            .logo-text
+                display none
+            .switch-header 
+                display none
+        .header-menu
+            width 88%
+            float left
+            text-align center
+            nav
+                width 100%
+                float left
+                padding 2.5% 0% 0% 0%
+                ul
+                    list-style none
+                    li
+                        display inline-block
+                        margin 0% 25px
+                        transition all 200ms
+                        padding 0
+                        text-align center
+                        .page-scroll
+                            text-decoration none
+                            color darken($red, 20%)
+                            font-family $font2
+                            text-transform uppercase
+                            font-size 1.2em
+                            transition all 500ms
+                            font-weight: 600
+                            padding 1%
+                            position relative
+                            &:after
+                                content: " "
+                                width 50px
+                                height 2px
+                                background-color transparent
+                                bottom 0
+                                left 1px
+                                position absolute
+                                transition all 500ms
+                        .active
+                            color darken($blue, 50%)
+                            &:after
+                                background-color darken($blue, 50%)
+    @media(max-width 768px)    
+        .header-bar-fixed
+           position fixed
+            z-index 999
+            top 0
+            left 0
+            background-color white
+#home
+    width 100%
+    float left
+    .slider-container
+        width 100%
+        float left
+        .slider
+            width 100%
+            float left
+            .slider1
+                background-image: url(../img/slide1.jpg);
+                background-size cover
+                background-position center center
+            .slider2
+                background-image: url(../img/slide2.jpg);
+                background-size cover
+                background-position center center
+            .slider3
+                background-image: url(../img/slide3.jpg);
+                background-size cover
+                background-position center center
+            .item
+                width 100%
+                float left
+                height 100vh
+                .slider-shadow
+                    width 100%
+                    float: left;
+                    height 100%
+                    background-color rgba(0, 0, 0, 0.5);
+                    .slider-presentation
+                        width 100%
+                        float left
+                        padding 22% 5% 0% 5%
+                        text-align center
+                        .first
+                            width 100%
+                            float left
+                            font-size 3em
+                            text-shadow 1px 1px 5px black
+                            font-family $font1
+                            color white
+                            @media(max-width 768px)
+                                font-size 2em
+                                margin-bottom 10%                     
+                        .second
+                            width 100%
+                            float left
+                            font-size 1.5
+                            font-family $font2
+                            text-shadow 1px 1px 5px black
+                            color white
+                        .link
+                            width 100%
+                            float left
+                            margin-top 10%
+                            .page-scroll
+                                padding 1% 2%
+                                border solid 2px white
+                                text-decoration none
+                                font-family: $font2
+                                color white
+                                transition all 500ms
+                            .red
+                                &:hover, &:focus
+                                    box-shadow: 1px 1px 5px darken($red, 40%)                                            background-color darken($red, 40%)
+                                    border darken($red, 40%)
+                                    background-color darken($red, 40%)
+                            .blue
+                                &:hover, &:focus
+                                    box-shadow: 1px 1px 5px darken($blue, 40%)
+                                    background-color darken($blue, 40%)
+                                    border darken($blue, 40%)
+        .controllers
+            width 100%
+            float left
+            position absolute
+            top 55%
+            left 0%
+            padding 0% 2%
+            background-color transparent
+            @media(max-width 768px)
+                display none !important
+            .control
+                width 2em
+                height 2em
+                border-radius 50%
+                font-size 2em
+                padding .55em
+            .prev
+                color white
+                float left
+                box-shadow 0px 0px 5px darken($red, 50%)
+            .next
+                float right
+                color white
+                box-shadow 0px 0px 5px darken($blue, 50%)
+#school
+    width 100%
+    float left
+    padding 0% 5% 5% 5%
+    border-bottom solid 1px grey
+    @media(max-width 768px)
+        padding 0 !important
+        margin 0 !important
+    .school-content
+        width 100%
+        float left
+        padding 0
+        margin 0
+        h2
+            font-family $font1
+            padding-top 2%
+            color #555555
+            font-size 2.2em
+            @media(max-width 768px)
+                font-size 1.5em
+                text-align center
+        span
+            color $red
+            margin 0
+        .school-divider
+            width 33.333%
+            float left
+            padding 1%
+            text-align center
+            transition all 500ms
+            font-weight: 600
+            @media(max-width 768px)
+                width 100% !important
+                margin 3% 0%
+            .divider-presentation
+                width 100%
+                float left
+                .fa
+                    font-size 3em
+                    padding 1em
+                    border-radius 50%
+                    border solid 2px $red
+                    color $red
+                h3
+                    font-family: $font1
+                    color $red
+                    foize 1.7em
+                    padding 1%
+            .divider-content
+                width 100%
+                float left
+                font-family $font2
+                color #959595
+                font-weight: 300
+                .divider-link
+                    width 100%
+                    float left
+                    margin-top 5%
+                    a
+                        padding 0.2em 1em
+                        color $red
+                        border solid 2px $red
+                        text-decoration none
+                        font-family $font1
+                        transition all 500ms
+                        border-radius 4px
+                        span
+                            margin 0% 1%
+                            transition 
+                        &:hover
+                            color white
+                            background-color $red
+                            box-shadow 1px 1px 5px $red
+                            span
+                                color white
+                .modal  /* The Modal (background) */
+                    display none /* Hidden by default */
+                    position fixed /* Stay in place */
+                    z-index 1 /* Sit on top */
+                    left 0
+                    top 0
+                    width 100% /* Full width */
+                    height 100% /* Full height */
+                    overflow auto /* Enable scroll if needed */
+                    background-color rgb(0,0,0) /* Fallback color */
+                    background-color rgba(0,0,0,0.4) /* Black w/ opacity */
+                    .modal-content /* Modal Content/Box */
+                        background-color #fefefe
+                        margin 15% auto /* 15% from the top and centered */
+                        padding 20px
+                        border 1px solid #888
+                        font-family $font1
+                        width 80% /* Could be more or less, depending on screen size */
+                        @media(max-width 768px)
+                            font-size 14px
+                            padding 5px 
+                            margin 75px auto 10px auto
+                            .horizontal-large
+                                width 100%
+                                float left                            
+                        .close /* The Close Button */
+                            color #aaa
+                            float: right
+                            font-size 28px
+                            font-weight bold
+                            &:hover, &:focus
+                                color black
+                                text-decoration none
+                                cursor pointer
+                        h1
+                            color red
+                            font-family $font2
+                            @media(max-width 768px)
+                                font-size 14px
+#method
+    width 100%
+    float left
+    background-image: url(../img/parallax5.jpg)
+    background-size cover
+    background-position center top
+    @media(max-width 768px)
+        background-position center center
+    .method-shadow
+        width 100%
+        float  left
+        height 100%
+        background-color rgba(255, 255, 255, 0.7);
+        padding 2% 5% 0% 5%
+        @media(max-width 768px)
+            padding 1% !important
+        .method-content
+            width 100%
+            float left
+            .method-presentation
+                width 100%
+                float left
+                text-align center
+                h2
+                    font-family $font1
+                    font-size 2.2em
+                    color rgba(0, 0, 0, .7)
+                    @media(max-width 768px)
+                        font-size 1.5em
+                        text-align center
+                    span
+                        color darken($blue, 40%)
+            .method-excerpt
+                width 100%
+                float left
+                padding 1% 10%
+                text-align justify
+                font-weight 600
+                @media(max-width 768px)
+                    padding 1% !important
+                .tipping
+                    font-size 1.2em
+                    font-family $font2
+                    color rgba(0, 0, 0, .9)
+                    line-height 1.3em
+                    font-weight 600
+                    @media(max-width 768px)
+                        font-size 1em
+                        font-weight bold
+                        line-height 1.1em
+                        font-weight 400                       
+                    span
+                        color darken($blue, 40%)
+                        font-family $font1
+                        font-weight 600
+            .method-links
+                width 100%
+                float left
+                padding 1% 25%
+                @media(max-width 768px)
+                    padding 1% 5% !important
+                a
+                    width 100%
+                    float left
+                    margin 2% 0%
+                    .link
+                        width 100%
+                        float left
+                        padding 2% 0%
+                        text-align center
+                        border solid 2px darken($blue, 40%)
+                        color darken($blue, 40%)
+                        font-family $font1
+                        border-radius 10px
+                        position relative
+                        transition all 500ms
+                        i 
+                            display none
+                            transition all 500ms                            
+                        &:hover
+                            background-color darken($blue, 40%)
+                            box-shadow  0px 0px 5px darken($blue, 40%)
+                            color white
+                            span
+                                text-align center
+                                color white                                
+                            i
+                                position absolute
+                                left 15px
+                                color transparent
+                                transition 500ms
+                                font-size 1.2em
+                                color white
+                                display block
+#teachers
+    width 100%
+    float left
+    padding 2% 5% 0% 5%
+    @media(max-width 768px)
+        padding 1%
+    .teachers-presentation
+        width 100%
+        float left
+        text-align center
+        h2
+            font-family $font1
+            font-size 2.2em
+            color rgba(0, 0, 0, .7)
+            @media(max-width 768px)
+                font-size 1.5em !important
+            span
+                color $red
+    .teachers-content
+        width 100%
+        float left
+        padding 2% 0%
+        text-align center
+        @media(max-width 768px)
+            padding 0 !important
+        .teachers-profile
+            width 33.333%
+            float left
+            padding 2%
+            @media(max-width 768px)
+                padding 0 !important
+                width 100%
+                
+
+            .teachers-pic
+                width 15em
+                height 15em
+                border solid 2px $red
+                margin 0% auto
+                border-radius 50%
+                background-image url(../img/teacher5.jpg)
+                background-size cover
+                background-position center center
+                .teachers-pic-shadow
+                    width 100%
+                    float left
+                    height 100%
+                    background-color rgba(0, 0, 0, .5)
+                    opacity 0
+                    padding 60% 10% 20% 10%
+                    border-radius 50%
+                    transition all 500ms
+                    &:hover
+                        opacity 1
+                    .teachers-social
                         width 33.333%
                         float left
-                        padding 1%
                         text-align center
                         transition all 500ms
-                        font-weight: 600
-                        .divider-presentation
-                                width 100%
-                                float left
-                                .fa
-                                        font-size 3em
-                                        padding 1em
-                                        border-radius 50%
-                                        border solid 2px $red
-                                        color $red
-                                h3
-                                        font-family: $font1
-                                        color $red
-                                        font-size 1.7em
-                                        padding 1%
-                        .divider-content
-                                width 100%
-                                float left
-                                font-family $font2
-                                color #959595
-                                font-weight: 300
-                                .divider-link
-                                        width 100%
-                                        float left
-                                        margin-top 5%
-                                        a
-                                                padding 0.2em 1em
-                                                color $red
-                                                border solid 2px $red
-                                                text-decoration none
-                                                font-family $font1
-                                                transition all 500ms
-                                                border-radius 4px
-                                                span
-                                                        margin 0% 1%
-                                                &:hover
-                                                        color white
-                                                        background-color $red
-                                                        box-shadow 1px 1px 5px $red
-                                .modal  /* The Modal (background) */
-                                        display none /* Hidden by default */
-                                        position fixed /* Stay in place */
-                                        z-index 1 /* Sit on top */
-                                        left 0
-                                        top 0
-                                        width 100% /* Full width */
-                                        height 100% /* Full height */
-                                        overflow auto /* Enable scroll if needed */
-                                        background-color rgb(0,0,0) /* Fallback color */
-                                        background-color rgba(0,0,0,0.4) /* Black w/ opacity */
-                                        .modal-content /* Modal Content/Box */
-                                                background-color #fefefe
-                                                margin 15% auto /* 15% from the top and centered */
-                                                padding 20px
-                                                border 1px solid #888
-                                                font-family $font1
-                                                width 80% /* Could be more or less, depending on screen size */
-                                                .close /* The Close Button */
-                                                        color #aaa
-                                                        float: right
-                                                        font-size 28px
-                                                        font-weight bold
-                                                        &:hover, &:focus
-                                                                color black
-                                                                text-decoration none
-                                                                cursor pointer
-                                        h1
-                                                color red
-                                                font-family $font2
-#method
-        width 100%
-        float left
-        background-image: url(../img/parallax5.jpg)
-        background-size cover
-        background-position center top
-        .method-shadow
-                width 100%
-                float  left
-                height 100%
-                background-color rgba(255, 255, 255, 0.7);
-                padding 2% 5% 0% 5%
-                .method-content
-                        width 100%
-                        float left
-                        .method-presentation
-                                width 100%
-                                float left
-                                text-align center
-                                h2
-                                        font-family $font1
-                                        font-size 2.2em
-                                        color rgba(0, 0, 0, .7)
-                                        span
-                                            color darken($blue, 40%)
-                        .method-excerpt
-                            width 100%
-                            float left
-                            padding 1% 10%
-                            text-align justify
-                            font-weight 600
-                            .tipping
-                                font-size 1.2em
-                                font-family $font2
-                                color rgba(0, 0, 0, .9)
-                                font-weight 300
-                                line-height 1.3em
-                                font-weight 600
-                                span
-                                    color darken($blue, 40%)
-                                    font-family $font1
-                                    font-weight 600
-                        .method-links
-                            width 100%
-                            float left
-                            padding 1% 25%
-                            a
-                                width 100%
-                                float left
-                                margin 2% 0%
-                                .link
-                                    width 100%
-                                    float left
-                                    padding 2% 0%
-                                    text-align center
-                                    border solid 2px darken($blue, 40%)
-                                    color darken($blue, 40%)
-                                    font-family $font1
-                                    border-radius 10px
-                                    position relative
-                                    transition all 500ms
-                                    &:hover
-                                        background-color darken($blue, 40%)
-                                        box-shadow  0px 0px 5px darken($blue, 40%)
-                                        color white
-                                        i
-                                            color white
-
-                                    span
-                                        text-align center
-                                    i
-                                        position absolute
-                                        left 15px
-                                        color transparent
-                                        transition 500ms
-                                        font-size 1.2em
-#teachers
-        width 100%
-        float left
-        padding 2% 5% 0% 5%
-        .teachers-presentation
+                        a
+                            font-size 1em
+                            color white
+                            text-decoration none
+                            padding 1em
+                            border-radius 50%
+                            border solid 1px white
+                            transition all 500ms
+                            &:hover
+                                background-color $red
+                                border $red
+                                box-shadow 0px 0px 5px $red
+                        .fa-facebook
+                            padding 1em 1.2em
+                        .fa-linkedin
+                            padding 1em 1.05em
+            .teachers-name
                 width 100%
                 float left
-                text-align center
-                h2
-                        font-family $font1
-                        font-size 2.2em
-                        color rgba(0, 0, 0, .7)
-                        span
-                                color $red
-        .teachers-content
-                width 100%
-                float left
-                padding 2% 0%
-                text-align center
-                .teachers-profile
-                        width 33.333%
-                        float left
-                        padding 2%
-                        .teachers-pic
-                                width 15em
-                                height 15em
-                                border solid 2px $red
-                                margin 0% auto
-                                border-radius 50%
-                                background-image url(../img/teacher5.jpg)
-                                background-size cover
-                                background-position center center
-                                .teachers-pic-shadow
-                                        width 100%
-                                        float left
-                                        height 100%
-                                        background-color rgba(0, 0, 0, .5)
-                                        opacity 0
-                                        padding 60% 10% 20% 10%
-                                        border-radius 50%
-                                        transition all 500ms
-                                        &:hover
-                                                opacity 1
-                                        .teachers-social
-                                                width 33.333%
-                                                float left
-                                                text-align center
-                                                transition all 500ms
-                                                a
-                                                        font-size 1em
-                                                        color white
-                                                        text-decoration none
-                                                        padding 1em
-                                                        border-radius 50%
-                                                        border solid 1px white
-                                                        transition all 500ms
-                                                        &:hover
-                                                                background-color $red
-                                                                border $red
-                                                                box-shadow 0px 0px 5px $red
-                                                .fa-facebook
-                                                        padding 1em 1.2em
-                                                .fa-linkedin
-                                                        padding 1em 1.05em
-                        .teachers-name
-                                width 100%
-                                float left
-                                margin 1% 0% 5% 0%
-                                span
-                                        font-family $font1
-                                        color $red
-                                        font-size 1.5em
-                        .teachers-excerpt
-                                width 100%
-                                float left
-                                margin 1% 0% 0% 0%
-                                span
-                                        font-family $font2
-                                        font-size 1em
-                                        color #6e6e6e
+                margin 1% 0% 5% 0%
+                span
+                    font-family $font1
+                    color $red
+                    font-size 1.5em
 #contact
+    width 100%
+    float left
+    padding 2% 5%
+    background-color alpha(grey, 10%)
+    @media(max-width 768px)
+        padding 1%
+    .contact-presentation
         width 100%
         float left
-        padding 2% 5%
-        background-color alpha(grey, 10%)
-        .contact-presentation
-                width 100%
-                float left
-                h2
-                        font-size 2.2em
-                        font-family $font1
-                        color rgba(0, 0, 0, .7)
-                        span
-                                color darken($blue, 40%)
-        .contact-content
-                width 100%
-                float left
+        h2
+            font-size 2.2em
+            font-family $font1
+            color rgba(0, 0, 0, .7)
+            @media(max-width 768px)
+                font-size 1.5em
                 text-align center
-                .whole
+            span
+                color darken($blue, 40%)
+    .contact-content
+        width 100%
+        float left
+        text-align center
+        .whole
+            width 100%
+            float left
+            .description
+                width 100%
+                float left
+                font-size 1em
+                padding-bottom 5%
+                font-family $font1
+                .left
+                    width 100%
+                    float left
+                    text-align left
+
+                .right
+                    width 100%
+                    text-align right
+                    font-family $font2
+        .contact-form
+            width 100%
+            float left
+            padding 1% 20%
+            @media(max-width 768px)
+                padding 1% !important
+            .form
+                width 100%
+                float left
+                .send-button
+                    width 100%
+                    float left
+                    padding 0% 40%
+                    text-align center
+                    @media(max-width 768px)
+                        padding 0% 20%
+                    button
                         width 100%
                         float left
-                        .description
-                                width 100%
-                                float left
-                                font-size 1em
-                                font-family $font1
-                                .left
-                                        width 50%
-                                        float left
-                                        text-align left
-                                .right
-                                        width 50%
-                                        float left
-                                        text-align right
-                                        font-family $font2
-                        .contact-form
-                                width 100%
-                                float left
-                                padding 1% 20%
-                                .form
-                                        width 100%
-                                        float left
-                                        .send-button
-                                                width 100%
-                                                float left
-                                                padding 0% 40%
-                                                text-align center
-                                                button
-                                                        width 100%
-                                                        float left
-                                                        line-height: 25px
-                                                        font-size 15px
-                                                        color darken($blue, 40%)
-                                                        border solid 1px darken($blue, 40%)
-                                                        transition all 500ms
-                                                        &:hover
-                                                                background-color darken($blue, 40%)
-                                                                color white
+                        line-height: 25px
+                        font-size 15px
+                        color darken($blue, 40%)
+                        border solid 1px darken($blue, 40%)
+                        transition all 500ms
+                        
+                        &:hover, &:focus
+                            background-color darken($blue, 40%)
+                            color white
 
-                                        .half-square
-                                                width 50%
-                                                float left
-                                                padding 1%
-                                                input
-                                                        width 100%
-                                                        float left
-                                                        line-height: 40px
-                                                        font-size 15px
-                                                        padding 0% 5%
-                                                        border solid 1px darken($blue, 40%)
-                                                        border-radius 3px
-                                        .square
-                                                width 100%
-                                                float left
-                                                padding 1%
-                                                textarea
-                                                        width 100%
-                                                        line-height: 40px
-                                                        font-size 15px
-                                                        height 200px
-                                                        float left
-                                                        padding 1%
-                                                        border solid 1px darken($blue, 40%)
-                                                        border-radius 3px
-                                                input
-                                                        width 100%
-                                                        float left
-                                                        line-height: 40px
-                                                        font-size 15px
-                                                        padding 0% 2.5%
-                                                        border solid 1px darken($blue, 40%)
-                                                        border-radius 3px
-                .half
-                        width 50%
+                .half-square
+                    width 50%
+                    float left
+                    padding 1%
+                    input
+                        width 100%
+                        float left
+                        line-height: 40px
+                        font-size 15px
+                        padding 0% 5%
+                        border solid 1px darken($blue, 40%)
+                        border-radius 3px
+                .square
+                    width 100%
+                    float left
+                    padding 1%
+                    textarea
+                        width 100%
+                        line-height: 18px
+                        font-size 15px
+                        height 200px
                         float left
                         padding 1%
-                        .description
-                                width 100%
-                                float left
-                                font-size 1.3em
-                                margin 1% 0%
-                                font-family: $font1
-                        .social-row
-                                width 100%
-                                float left
-                                text-align center
-                                margin 4% 0%
-                                a
-                                        text-decoration none
-                                        color darken($blue, 40%)
-                                        text-align center
-                                        display inline-block
-                                        .contact-social-icon
-                                                width 4.5em
-                                                height 4.5em
-                                                border 1px solid darken($blue, 40%)
-                                                border-radius 50%
-                                                margin 2% 20%
-                                                &:hover
-                                                        background-color darken($blue, 40%)
-                                                        box-shadow 0px 0px 5px darken($blue, 40%)
-                                                        color white
-                                                span
-                                                        font-size 2em
-                                                        padding 25%
-                        .contact-large
-                                width 100%
-                                float left
-        .phone
-                .ph
-                        font-family $font1
-                .e
+                        border solid 1px darken($blue, 40%)
+                        border-radius 3px
+                    input
                         width 100%
                         float left
-                iframe
-                        width 80%
-                        float left
-                        margin  0% 10%
-footer
-        width 100%
-        float left
-        padding 1% 5%
-        text-align center
-        background-color darken($blue, 40%)
-        span
-                font-family: $font2
+                        line-height: 40px
+                        font-size 15px
+                        padding 0% 2.5%
+                        border solid 1px darken($blue, 40%)
+                        border-radius 3px
+                .half
+                    width 50%
+                    float left
+                    padding 1%
+        .description
+            width 50%
+            float left
+            font-size 1.3em
+            margin 1% 0%
+            font-family: $font1
+            @media(max-width 768px)
+                width 100% !important
                 font-size 1em
-                color white
+        .half
+            width 100%
+            float left
+            padding 1%
+        .social-row
+            width 100%
+            float left
+            text-align center
+            margin 4% 0%
+            a
+                text-decoration none
+                color darken($blue, 40%)
+                text-align center
+                display inline-block
+                .contact-social-icon
+                    width 4.5em
+                    height 4.5em
+                    border 1px solid darken($blue, 40%)
+                    border-radius 50%
+                    margin 2% 20%
+                    @media(max-width 768px)
+                        width 2em
+                        height 2em
+                        padding .3em
+                    &:hover
+                        background-color darken($blue, 40%)
+                        box-shadow 0px 0px 5px darken($blue, 40%)
+                        color white
+                    span
+                        font-size 2em
+                        padding 25%
+                        @media(max-width 768px)
+                            padding 0 !important
+                            font-size 1em
+                    .contact-large
+                        width 100%
+                        float left
+        .phone
+            .ph
+                font-family $font1
+            .e
+                width 100%
+                float left
+            iframe
+                width 80%
+                float left
+                margin  0% 10%
+footer
+    width 100%
+    float left
+    padding 1% 5%
+    text-align center
+    background-color darken($blue, 40%)
+    @media(max-width 768px)
+        padding 1% !important
+    span
+        font-family: $font2
+        font-size 1em
+        color white
+        @media(max-width 768px)
+            font-size .7em
