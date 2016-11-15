@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>EnglishWay School | Bem Vindo</title>
 	<link rel="stylesheet" href="assets/css/styles.css">
@@ -25,7 +26,11 @@
 													  fjs.parentNode.insertBefore(js, fjs);
 													}(document, 'script', 'facebook-jssdk'));</script>
 
-
+	<div class="mobile-header">
+		<div class="switch-header">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</div>
+	</div>
 	<header calss="header" id="header">
 		<div class="header-st-row">
 			<div class="st-divider" id="st-divider-contact">
@@ -40,13 +45,13 @@
 			</div>
 			<div class="st-divider" id="st-divider-hour">
 				<div class="hour nd-divider" >
-					<i class="fa fa-clock-o" aria-hidden="true"></i><span>08:00 - 20:00 - Seg - Sáb</span>
+					<i class="fa fa-clock-o" aria-hidden="true"></i><span>08:00 - 22:00 - Seg à Sex| Sáb 08:00 -16:00</span>
 				</div>
 			</div>
 		</div>
 		<div class="header-bar">
 			<div class="header-logo">
-				<a href="#home"><img src="assets/img/EW_logo.png"/></a>
+				<a href="#home"><img class="logo-img" src="assets/img/EW_logo.png"/><img class="logo-text" src="logo-text.png" alt=""></a>
 			</div>
 			<div class="header-menu">
 				<nav>
@@ -178,7 +183,7 @@
 					<h2>O nosso <span>Método de Ensino</span></h2>
 				</div>
 				<div class="method-excerpt wow bounceInLeft">
-					<span class="tipping"><p><span>O método EnglishWay</span> nasceu após a análise de pesquisas realizadas com pessoas que já cursaram outras escolas e cursos, e concluiu-se que faltava no mercado um método difenciado para o ensino da língua inglesa. Foi criado então o Método EnglishWay, com o intuito de proporcionar um curso de inglês fora dos padrões tradicionais já existentes, com um jeito único de aprender. </p><p><span>Aulas 100% Individuais:</span> Sabendo-se que cada ser humano tem o seu tempo e seus limites, a EnglishWay, respeitando a individualidade de cada aluno, optou por disponizar aulas individuais, onde na sala ficam apenas o aluno e seu professor e o aluno é que marca a data e hora. Sendo assim, estimulamos e encorajamos o aluno a fazer leituras, questionamentos, podendo se sentir mais à vontade, sem se preocupar com criticas de terceiros. Além disso, as aulas individuais tem como propósito a agilidade e a qualidade do ensino. </p><p><span>Aulas em Grupo:</span>A conversação é uma habilidade vital da comunicação, sendo indispensável par o raciocínio e aprendizado da língua estrangeira. As aulas de Conversação são ministradas em salas específicas para a atividade, com aparelhos eletrónicos de som e imagem com o intuíto de que haja maior interatividade entre os alunos. Esta é essencial para ampliar o vocabulário e aprimorar a pronuncia. Durane as aulas de conversação os alunos são convidados a hipoteticamente vivenciar as mais diversificadas situações para aplicação da linguagem.</p>
+					<span class="tipping"><p><span>O método EnglishWay</span> nasceu após a análise de pesquisas realizadas com pessoas que já cursaram outras escolas e cursos, e concluiu-se que faltava no mercado um método diferenciado para o ensino da língua inglesa. Foi criado então o Método EnglishWay, com o intúito de proporcionar um curso de inglês fora dos padrões tradicionais já existentes, com um jeito único de aprender. </p><p><span>Aulas 100% Individuais:</span> Sabendo-se que cada ser humano tem o seu tempo e seus limites, a EnglishWay, respeitando a individualidade de cada aluno, optou por disponibilizar aulas individuais, onde na sala ficam apenas o aluno e seu professor, e o aluno é quem marca a data e hora. Sendo assim, estimulamos e encorajamos o aluno a fazer leituras, questionamentos, podendo se sentir mais à vontade, sem se preocupar com críticas de terceiros. Além disso, as aulas individuais tem como propósito a agilidade e a qualidade do ensino. </p><p><span>Aulas em Grupo: </span>A conversação é uma habilidade vital da comunicação, sendo indispensável para o raciocínio e aprendizado da língua estrangeira. As aulas de Conversação são ministradas em salas específicas para a atividade, com aparelhos eletrônicos de som e imagem com o intuíto de que haja maior interatividade entre os alunos. Esta é essencial para ampliar o vocabulário e aprimorar a pronuncia. Durante as aulas de conversação os alunos são convidados a hipoteticamente vivenciar as mais diversificadas situações para aplicação da linguagem.</p>
 				</div>
 				<div class="method-links wow bounceInRight">
 				<a href="#teachers">
@@ -273,15 +278,15 @@
 						<span>Pode escrever pra gente...</span>
 					</div>
 					<div class="description-divider wow fadeInRight right">
-						<span class="fa fa-envelope" aria-hidden="true"></span> <span>contato@englishway.com.br</span>
+						<span class="fa fa-envelope" aria-hidden="true"></span> <span>contato@englishwayschool.com.br</span>
 					</div>
 				</div>
 				<div class="contact-form wow fadeInDown">
-					<form class="form" method="post">
-						<div class="half-square name-square"><input type="text" class="name" name="name" placeholder="Qual seu Nome?"></div>
-						<div class="half-square phone-square"><input type="text" class="phone" name="phone" placeholder="Qual seu Telefone?"></div>
-						<div class="square mail-square"><input type="text" class="mail" name="mail" placeholder="Digite seu E-mail"> </div>
-						<div class="square message-square"><textarea name="message" placeholder="Vamos conversar?"></textarea></div>
+					<form class="form" method="get">
+						<div class="half-square name-square"><input type="text" class="name form-item" name="nome" id="form-name" placeholder="Qual seu Nome?"></div>
+						<div class="half-square phone-square"><input type="text" class="phone form-item" name="Telefone" id="form-phone" placeholder="Qual seu Telefone?"></div>
+						<div class="square mail-square"><input type="text" class="mail form-item" name="mail" id="form-mail" placeholder="Digite seu E-mail"> </div>
+						<div class="square message-square"><textarea name="mensagem" class="form-item message" id="form-message" placeholder="Vamos conversar?"></textarea></div>
 						<div class="send-button"> <button type="button" name="button"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button></div>
 
 					</form>
@@ -295,12 +300,12 @@
 							<span class="fa fa-facebook" aria-hidden="true"></span>
 						</div>
 					</a>
-					<a href="https://www.facebook.com/English-WAY-1038509306175527/?fref=ts" target="_blank" >
+					<a href="https://www.instagram.com/englishway.school/" target="_blank" >
 						<div class="contact-social-icon">
 							<span class="fa fa-instagram" aria-hidden="true"></span>
 						</div>
 					</a>
-					<a href="maito:contato@englishwayschool.com.br"_blank" >
+					<a href="mailto:contato@englishwayschool.com.br">
 						<div class="contact-social-icon">
 							<span class="fa fa-envelope" aria-hidden="true"></span>
 						</div>
