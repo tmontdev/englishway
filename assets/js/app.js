@@ -190,3 +190,10 @@ $(function(){
         new WOW().init();
     }
 });
+
+$(function(){
+
+    var width = $(window).width();
+    var marginLogo = (width - 120)/2+'px';
+    $('.logo-mobile').css('margin', '0px '+ marginLogo);
+});
