@@ -864,6 +864,12 @@ body left 0 a {
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
 }
+@media (max-width: 768px) {
+  #teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow {
+    background-color: rgba(0,0,0,0.3) !important;
+    opacity: 1;
+  }
+}
 #teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow:hover {
   opacity: 1;
 }

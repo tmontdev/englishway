@@ -17,7 +17,8 @@ $(document).ready(function(){
 
 })
 
-new WOW().init();
+
+
 
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
@@ -184,3 +185,8 @@ $(function(){
 });
 
 
+$(function(){
+    if ($(window).width()>769) {
+        new WOW().init();
+    }
+});
