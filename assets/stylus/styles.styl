@@ -19,6 +19,7 @@ $font2 = 'Roboto'
 }
 .mobile-header
     display none
+    transition all 500ms ease-in-out
     //mobile header-line
     @media(max-width 768px)
         display block
@@ -26,25 +27,37 @@ $font2 = 'Roboto'
         position fixed
         width 100%
         background-color white
-        height 60px
+        height 61px
         top 0
         left 0
-        box-shadow 0px 0px 5px black
+        box-shadow 0px 0px 5px black 
+        text-align center
+        .page-scroll
+            width 120px
+            float left 
+            text-align center
+            display block
+            img
+                width 120px
+                height auto
+                float left 
+                          
         .switch-header
-            z-index 999
+            z-index 901
             position fixed
-            top 10px
+            top 13px
             left 10px
-            width 40px
-            height 41px
+            width 35px
+            height 35px
             padding 5px
-            border solid 1px black
+            border solid 1px $blue
             border-radius 4px
             cursor pointer
             text-align center
             display block
             i
-                font-size 30px
+                font-size 25px
+                color $blue
 body
 	width 100%
 	float left
@@ -64,52 +77,45 @@ body
     left 0
     //header mobile
     @media(max-width 768px)
-        display none
         width 70%
+        float left
         position fixed
         top 0
-        left 0
+        left -500px
         height 100vh
-        background-color $blue
-        margin 0
-        padding 0
-        z-index 910
-        .header-st-row
+        background-color darken($blue, 50%)
+        box-shadow 0px 0px 10px black
+        transition all 500ms ease-in-out   
+    .rollback
+        display none
+        transition all 250ms ease-in-out
+        @media(max-width 768px)
+            display block
+            width 43%
             position absolute
-            padding 0 !important
-            margin 0 !important
-            bottom 0
-            left 0
+            top 0
+            left 100%
+            height 100vh
             background-color transparent
-            width 100%
-            float left
-            .st-divider
-                width 100% !important
-                float left
-                margin 0
-                padding 0
-        .header-bar
-            width 100%
-            float left 
-            background-color transparent !important
-            box-shadow none !important 
-            height 85vh
-            padding 0 !important
-            .header-logo
-                width 100% !important
-                padding 0 !important
-                margin 0 !important
-                float left 
-                position relative 
-                height 70px
-                background-color white
-                .logo-img
-                    width 70px !important
-                    position absolute !important
-                    left 70px !important
-                    top 10px !important
-                    padding 0 !important           
-
+    .switch-header
+        display none
+        @media(max-width 768px)
+            z-index 999 !important
+            position absolute
+            top 13px
+            left 10px
+            width 35px
+            height 35px
+            padding 5px
+            border solid 1px $blue
+            border-radius 4px
+            cursor pointer
+            text-align center
+            display block
+            i
+                font-size 25px
+                color $blue
+   
     .header-st-row
         width 100%
         float left
@@ -117,23 +123,41 @@ body
         font-family: $font1
         padding 0% 5%
         background-color: darken($blue, 50%)
+        @media(max-width 768px)
+            padding 1% !important
+            position absolute
+            bottom 0 
+            left 0
+            background-color transparent
+            line-height .9em
         .st-divider
             width 33.333%
             float left
             text-align center
+            @media(max-width 768px)
+                width 100%
             span
                 font-size 0.9em
                 color white
                 margin 1%
+                @media(max-width 768px)
+                    margin 0
+                    font-size .7em
             a
                 text-decoration none
                 font-size 0.9em
                 color white
                 margin 1%
+                @media(max-width 768px)
+                    font-size .7em
+                    margin 0
             i
                 color white
                 font-size 1em
                 margin 1%
+                @media(max-width 768px)
+                    margin 0
+                    font-size .7em
     .header-bar
         width 100%
         float left
@@ -142,33 +166,75 @@ body
         box-shadow 1px 1px 10px black
         z-index 999
         transition all 250ms ease-in-out
+        @media(max-width 768px)
+            padding 70px 0 0 0 !important
+            box-shadow none
+            height 85vh
+            background-color transparent            
         .header-logo
             width 12%
             float left
-            img
+            @media(max-width 768px)
+                width 100%
+                float left
+                position absolute
+                top 0
+                left 0
+                height 61px
+                background-color white
+                text-align center
+                box-shadow 0px 0px 5px black
+            .logo-img
                 width 100%
                 float left
                 padding 10%
-            .logo-text
+                @media(max-width 768px)
+                    display none
+            .mobile-logo
                 display none
+                @media(max-width 768px)
+                    display block
+                    width 120px
+                    margin 0% auto
+
             .switch-header 
                 display none
         .header-menu
             width 88%
             float left
             text-align center
+            @media(max-width 768px)
+                width 100%
+                padding 5% 0%
+                text-align left
             nav
                 width 100%
                 float left
                 padding 2.5% 0% 0% 0%
+                @media(max-width 768px)
+                    padding 0%
                 ul
                     list-style none
+                    @media(max-width 768px)
+                        margin 0%
+                        padding 0%
                     li
                         display inline-block
                         margin 0% 25px
                         transition all 200ms
                         padding 0
                         text-align center
+                        @media(max-width 768px)
+                            display block !important
+                            margin 0%
+                            padding 15px
+                            text-align left
+                            width 100%
+                            float left
+                            &:hover, &:focus
+                                background-color white
+                                .page-scroll
+                                    color darken($blue, 50%)!important
                         .page-scroll
                             text-decoration none
                             color darken($red, 20%)
@@ -179,6 +245,9 @@ body
                             font-weight: 600
                             padding 1%
                             position relative
+                            @media(max-width 768px)
+                                color white !important
+                                padding 5% 50% 5% 5%
                             &:after
                                 content: " "
                                 width 50px
@@ -188,13 +257,21 @@ body
                                 left 1px
                                 position absolute
                                 transition all 500ms
+                                
                         .active
                             color darken($blue, 50%)
+                            @media(max-width 768px)
+                                color white
+                            
                             &:after
                                 background-color darken($blue, 50%)
-    @media(max-width 768px)    
-        .header-bar-fixed
-           position fixed
+                                @media(max-width 768px)
+                                    display none
+
+    .header-bar-fixed
+        opacity 1
+        @media(min-width 769px)
+            position fixed
             z-index 999
             top 0
             left 0
@@ -535,9 +612,7 @@ body
             padding 2%
             @media(max-width 768px)
                 padding 0 !important
-                width 100%
-                
-
+                width 100%    
             .teachers-pic
                 width 15em
                 height 15em
@@ -556,6 +631,9 @@ body
                     padding 60% 10% 20% 10%
                     border-radius 50%
                     transition all 500ms
+                    @media(max-width 768px)
+                        background-color rgba(0, 0, 0, .3) !important
+                        opacity 1
                     &:hover
                         opacity 1
                     .teachers-social
@@ -622,11 +700,11 @@ body
                 .left
                     width 100%
                     float left
-                    text-align left
+                    text-align center
 
                 .right
                     width 100%
-                    text-align right
+                    text-align center
                     font-family $font2
         .contact-form
             width 100%
@@ -695,7 +773,7 @@ body
                     float left
                     padding 1%
         .description
-            width 50%
+            width 100%
             float left
             font-size 1.3em
             margin 1% 0%
@@ -704,9 +782,11 @@ body
                 width 100% !important
                 font-size 1em
         .half
-            width 100%
+            width 50%
             float left
             padding 1%
+            @media(max-width 768px)
+                width 100%
         .social-row
             width 100%
             float left
