@@ -76,7 +76,7 @@ body
     top 0
     left 0
     //header mobile
-    @media(max-width 768px)
+    @media screen and (max-width 768px)
         width 70%
         float left
         position fixed
@@ -89,7 +89,7 @@ body
     .rollback
         display none
         transition all 250ms ease-in-out
-        @media(max-width 768px)
+        @media screen and (max-width 768px)
             display block
             width 43%
             position absolute
@@ -123,7 +123,7 @@ body
         font-family: $font1
         padding 0% 5%
         background-color: darken($blue, 50%)
-        @media(max-width 768px)
+        @media screen and (max-width 768px)
             padding 1% !important
             position absolute
             bottom 0 
@@ -612,16 +612,21 @@ body
             padding 2%
             @media(max-width 768px)
                 padding 0 !important
-                width 100%    
+                width 100% 
+            .miguel
+                background-image url('../img/Miguel.jpg')
+            .pinca
+                background-image url('../img/Pinça.jpg')
+            .henrique
+                background-image url('../img/Henrique.jpg')
             .teachers-pic
                 width 15em
                 height 15em
                 border solid 2px $red
                 margin 0% auto
                 border-radius 50%
-                background-image url(../img/teacher5.jpg)
                 background-size cover
-                background-position center center
+                background-position top center
                 .teachers-pic-shadow
                     width 100%
                     float left
@@ -657,6 +662,7 @@ body
                             padding 1em 1.2em
                         .fa-linkedin
                             padding 1em 1.05em
+
             .teachers-name
                 width 100%
                 float left
@@ -695,7 +701,7 @@ body
                 width 100%
                 float left
                 font-size 1em
-                padding-bottom 5%
+                padding-bottom 2%
                 font-family $font1
                 .left
                     width 100%

@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     //smoothscroll
     $('a.page-scroll').on('click', function (e) { // ^= que contem
-        if ($(window).width()>992) {
+        if ($(window).width()>769) {
             var headerHeight = $('.header-bar').height();
             e.preventDefault();
             //$(document).off("scroll");

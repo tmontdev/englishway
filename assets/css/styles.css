@@ -74,7 +74,7 @@ body left 0 a {
   top: 0;
   left: 0;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #header {
     width: 70%;
     float: left;
@@ -99,7 +99,7 @@ body left 0 a {
   -ms-transition: all 250ms ease-in-out;
   -o-transition: all 250ms ease-in-out;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #header .rollback {
     display: block;
     width: 43%;
@@ -141,7 +141,7 @@ body left 0 a {
   padding: 0% 5%;
   background-color: #0e086e;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #header .header-st-row {
     padding: 1% !important;
     position: absolute;
@@ -852,15 +852,23 @@ body left 0 a {
     width: 100%;
   }
 }
+#teachers .teachers-content .teachers-profile .miguel {
+  background-image: url("../img/Miguel.jpg");
+}
+#teachers .teachers-content .teachers-profile .pinca {
+  background-image: url("../img/Pinça.jpg");
+}
+#teachers .teachers-content .teachers-profile .henrique {
+  background-image: url("../img/Henrique.jpg");
+}
 #teachers .teachers-content .teachers-profile .teachers-pic {
   width: 15em;
   height: 15em;
   border: solid 2px #ef2917;
   margin: 0% auto;
   border-radius: 50%;
-  background-image: url("../img/teacher5.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
 }
 #teachers .teachers-content .teachers-profile .teachers-pic .teachers-pic-shadow {
   width: 100%;
@@ -971,7 +979,7 @@ body left 0 a {
   width: 100%;
   float: left;
   font-size: 1em;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   font-family: 'Ubuntu';
 }
 #contact .contact-content .whole .description .left {
