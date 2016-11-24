@@ -163,25 +163,27 @@ $(function(){
 });
 
 $(function(){
-    $('.on').click(function(event) {
-        $('.mobile-header').css({
-            opacity: '0'
-        });
-        $('#header').css({
-            left: '0px'
-        });
-        setTimeout(function(){
-            $('.rollback').css('background-color', 'rgba(0,0,0,.5)');
-        }, 400);
+    if ($(window).width() < 768) {
+        $('.on').click(function(event) {
+            $('.mobile-header').css({
+                opacity: '0'
+            });
+            $('#header').css({
+                left: '0px'
+            });
+            setTimeout(function(){
+                $('.rollback').css('background-color', 'rgba(0,0,0,.5)');
+            }, 400);
 
-    });
-    $('.off').click(function(event) {
-        $('.rollback').css('background-color', 'transparent');
-        setTimeout(function(){
-            $('#header').css('left', '-768px');
-            $('.mobile-header').css('opacity', '1');
-        }, 200);
-    });
+        });
+        $('.off').click(function(event) {
+            $('.rollback').css('background-color', 'transparent');
+            setTimeout(function(){
+                $('#header').css('left', '-768px');
+                $('.mobile-header').css('opacity', '1');
+            }, 200);
+        });
+    }
 });
 
 
